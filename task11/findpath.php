@@ -31,13 +31,10 @@ function findShortPath(array $matrix, array $start, array $end) //$start and $en
 
         if (!in_array($visitedNodes, $currentNode)) {
             array_push($visitedNodes, $currentNode);
-            checkNeighbours($currentNode, $direction);
+            for ($i = 0; $i < count($direction); ++$i) {
+            }
         }
     }
 
     return $path;
-}
-
-function checkNeighbours($currentNode, $directions)
-{
 }
