@@ -12,14 +12,14 @@ class Field
 
     private function generateField(): array
     {
-        for ($i = 0; $i < 10; ++$i) {
-            for ($k = 0; $k < 10; ++$k) {
+        for ($i = 0; $i < 4; ++$i) {
+            for ($k = 0; $k < 4; ++$k) {
                 $this->field[$i][$k] = rand() % 2;
             }
         }
 
-        $this->A = array('row' => rand() % 9, 'col' => rand() % 9);
-        $this->B = array('row' => rand() % 9, 'col' => rand() % 9);
+        $this->A = array('row' => rand() % 4, 'col' => rand() % 4);
+        $this->B = array('row' => rand() % 4, 'col' => rand() % 4);
 
         $this->field[$this->A['row']][$this->A['col']] = "A";
         $this->field[$this->B['row']][$this->B['col']] = "B";

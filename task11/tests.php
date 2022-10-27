@@ -16,6 +16,14 @@ function test($matrix, $start, $end)
     }
 }
 
-$field = new Field();
+// $field = new Field();
 
-test($field->getField(), $field->getACoordinates(), $field->getBCoordinated());
+$matrix = array(
+    array(0, 0, "A", 1),
+    array(1, 1, 0, 0),
+    array(1, 1, 1, 0),
+    array(1, 0, 0, 0),
+    array(1, "B", 1, 1)
+);
+
+test($matrix, array('row' => 0, 'col' => 2), array('row' => 4, 'col' => 1));
