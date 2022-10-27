@@ -17,22 +17,13 @@ function findShortPath(array $matrix, array $start, array $end) //$start and $en
         return $path[] = $end;
     }
 
-    // for ($row = 0; $row < count($matrix); ++$row) {
-    //     for ($col = 0; $col < count($matrix[$row]); ++$col) {
-    //         array_push($visitedNodes, false);
-    //     }
-    // }
-
     $queue = new SplQueue();
     $queue->enqueue($start);
 
     while (!$queue->isEmpty()) {
-        $currentNode = $queue->dequeue();
-
-        if (!in_array($visitedNodes, $currentNode)) {
-            array_push($visitedNodes, $currentNode);
-            for ($i = 0; $i < count($direction); ++$i) {
-            }
+        for ($i = 0; $i < count($direction); ++$i) {
+            $newNode = ($start + $direction[$i]);
+            $queue->enqueue($start + $direction[$i]);
         }
     }
 

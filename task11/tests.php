@@ -16,6 +16,6 @@ function test($matrix, $start, $end)
     }
 }
 
-$filed = new Field();
+$field = new Field();
 
 test($field->getField(), $field->getACoordinates(), $field->getBCoordinated());
